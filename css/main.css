@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.hints {
+    min-height: 50px;
+}
+.hint {
+    width: 30px;
+    margin: 10px 4px 5px 0px;
+    
+}
+.active-hint {
+    content: url(../img/active-hint.png);
+}
+
+.container {
+    
+    margin: 0 auto;
+}
+
+.hints {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.board td {
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.hide {
+    background-color: blue;
+}
+
+.board .hide:hover {
+    background-color: white;
+}
+
+.board .hide:active {
+    background-color: blue;
+}
+
+.show {
+    background-color: cyan;
+    transition: all 0.5s;
+}
