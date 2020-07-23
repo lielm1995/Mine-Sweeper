@@ -2,36 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Mine Sweeper - Liel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Mine Sweeper</title>
 </head>
 
 <body onload="initGame()">
 
     <div class="header">
-
+        <h1>Mine Sweeper</h1>
     </div>
     <div>
         <div class="container">
+            <div class="timer">
+                00:00
+            </div>
             <div class="hints">
             </div>
+            
+            <span class="smiley emoji" onmousedown="mouseDown()" onmouseup="mouseUp()" onclick="initGame()">🙂</span>
+            <div class="board">
 
-            <table >
-                <tbody class="board">
-                </tbody>
-            </table>
+            </div>
+
+           
+            
+            <div class="lives">
+                
+            </div>
+            
+            <div class="safe-click">
+                
+                
+            </div>
+            
 
             <div class="buttons">
+                
+                
+                
+                <span class="mine emoji"></span>
+                <span class="flag emoji"></span>
+                <br />
                 <button class="level" onclick="changeLevel('easy')">Easy</button><!--
                 --><button class="level" onclick="changeLevel('hard')">Hard</button><!--
                 --><button class="level" onclick="changeLevel('extreme')">Extreme</button>
+                <button class="manually" onclick="manuallyCreate()">Manually place mines</button>
             </div>
         </div>
     </div>
     <div class="footer">
-
+         By Liel Malihi &copy;
     </div>
 
     <script src="js/util.js"></script>

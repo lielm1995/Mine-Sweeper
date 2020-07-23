@@ -1,54 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+*::selection {
+    background-color: transparent;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    zoom: 80%
+}
+
 body {
-    margin: 0;
+    margin: 0 0 30px 0;
     text-align: center;
+    font-family: cursive;
+}
+
+.header {
+    margin: 0;
+}
+h1 {
+    background-color: darkmagenta;
+    color: white;
+    padding: 20px;
+   
+    font-size: 50px;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+}
+
+.timer {
+    font-size: x-large;
 }
 
 .hints {
     min-height: 50px;
 }
+
 .hint {
-    width: 30px;
-    margin: 10px 4px 5px 0px;
-    
+    width: 45px;
+    cursor: pointer;
 }
+
 .active-hint {
     content: url(../img/active-hint.png);
 }
 
-.container {
-    
+table {
+    border-collapse: collapse;
+    /* width: max-content; */
     margin: 0 auto;
 }
 
-.hints {
-    text-align: left;
-}
-
-table {
-    border-collapse: collapse;
-}
-
 .board td {
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 25px;
     text-align: center;
     cursor: pointer;
     border: 1px solid black;
 }
 
 .hide {
-    background-color: blue;
+    background-color: dimgrey;
 }
 
-.board .hide:hover {
-    background-color: white;
+.board .hide:hover, .board .safe:hover {
+    background-color: lightgray;
 }
 
 .board .hide:active {
-    background-color: blue;
+    background-color: darkgray;
 }
 
 .show {
-    background-color: cyan;
+    background-color: whitesmoke;
     transition: all 0.5s;
+}
+
+.safe {
+    background-color: red;
+}
+
+.lives {
+    min-height: 50px; 
+}
+
+.live {
+    width: 45px;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+button {
+    padding: 5px;
+    border: .5px solid white;
+    background-color: deeppink;
+    margin: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    transition: all 0.2s;
+    outline: none;
+    font-family: cursive;
+}
+
+button:hover {
+    color: white;
+    background-color: darkorchid;
+    cursor: pointer;
+    /* transition: 1s; */
+}
+
+button:active {
+    color: white;
+    background-color: fuchsia;
+    cursor: pointer;
+}
+
+button:disabled {
+    color: white;
+    background-color: pink;
+    cursor: pointer;
+}
+
+/* End Buttons */
+
+.emoji {
+    font-size: x-large;
+}
+
+.smiley {
+    cursor: pointer;
+    display: block;
+}
+
+.manually {
+    display: block;
+    margin: 5px auto;
+    margin-bottom: 35px;
+}
+
+/* tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* end tooltip */
+
+
+.footer {
+    background: darkmagenta;
+    color: white;
+    padding: 5px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
 }
