@@ -22,7 +22,7 @@
             <div class="hints">
             </div>
             
-            <div class="smiley emoji" onmousedown="mouseDown()" onmouseup="mouseUp()" onclick="initGame()">🙂</div>
+            <button class="smiley emoji" onmousedown="mouseDown()" onmouseup="mouseUp()" onclick="initGame()">🙂</button>
             <div class="board">
 
             </div>
@@ -33,8 +33,8 @@
                 
             </div>
             
-            <div class="safe-click">
-                
+            <div >
+                <button class="safe-click styled-button" onclick="getSafeCell()">Safe Click! (3 left)</button>
                 
             </div>
             
@@ -46,10 +46,10 @@
                 <span class="mine emoji"></span>
                 <span class="flag emoji"></span>
                 <br />
-                <button class="level" onclick="changeLevel('easy')">Easy</button><!--
-                --><button class="level" onclick="changeLevel('hard')">Hard</button><!--
-                --><button class="level" onclick="changeLevel('extreme')">Extreme</button>
-                <button class="manually" onclick="manuallyCreate()">Manually place mines</button>
+                <button class="level styled-button" onclick="changeLevel('easy')">Easy</button><!--
+                --><button class="level styled-button" onclick="changeLevel('hard')">Hard</button><!--
+                --><button class="level styled-button" onclick="changeLevel('extreme')">Extreme</button>
+                <button class="manually styled-button" onclick="manuallyCreate()">Manually place mines</button>
             </div>
         </div>
     </div>

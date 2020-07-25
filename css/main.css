@@ -29,7 +29,7 @@ h1 {
     margin: 0;
 }
 .container {
-    margin: 0 auto;
+    margin-top: 2.5px;
 }
 
 .timer {
@@ -48,7 +48,14 @@ h1 {
 .active-hint {
     content: url(../img/active-hint.png);
 }
-
+.smiley {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+}
 table {
     border-collapse: collapse;
     /* width: max-content; */
@@ -94,11 +101,11 @@ table {
 
 /* Buttons */
 
-button {
+.styled-button {
     cursor: pointer;
     outline: none;
 }
-button {
+.styled-button {
     padding: 5px;
     border: .5px solid white;
     background-color: deeppink;
@@ -112,20 +119,20 @@ button {
     font-family: cursive;
 }
 
-button:hover {
+.styled-button:hover {
     color: white;
     background-color: darkorchid;
     cursor: pointer;
     /* transition: 1s; */
 }
 
-button:active {
+.styled-button:active {
     color: white;
     background-color: fuchsia;
     cursor: pointer;
 }
 
-button:disabled {
+.styled-button:disabled {
     color: white;
     background-color: pink;
     cursor: pointer;
@@ -137,10 +144,7 @@ button:disabled {
     font-size: x-large;
 }
 
-.smiley {
-    cursor: pointer;
-    display: block;
-}
+
 
 .manually {
     display: block;

@@ -116,15 +116,15 @@ function renderLives() {
 }
 
 function renderSafeClickBtn() {
-    var strHTML = `<button onclick="getSafeCell()">Safe Click! (${gSafeClickCount} left)</button>`;
-    var elHints = document.querySelector('.safe-click');
-    elHints.innerHTML = strHTML;
+    var str = `Safe Click! (${gSafeClickCount} left)`;
+    var elSafeClick = document.querySelector('.safe-click');
+    elSafeClick.innerText = str;
 }
 
 function alignment() {
     var elTable = document.querySelector('table');
     var tableWidth = elTable.offsetWidth;
-    var elBtns = document.querySelectorAll('button');
+    var elBtns = document.querySelectorAll('.styled-button');
     for (var i = 1; i < elBtns.length - 1; i++) {
         elBtns[i].style.minWidth = (tableWidth / 3) + 'px';
     }
